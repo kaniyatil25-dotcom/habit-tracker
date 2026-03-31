@@ -31,7 +31,6 @@
     overflow-x: hidden;
   }
 
-  /* ── HEADER ── */
   .header {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
@@ -42,7 +41,6 @@
   .header h1 { font-family: 'Space Mono', monospace; font-size: 1.1rem; flex:1; }
   .header h1 span { color: var(--accent); }
 
-  /* ── MONTH NAV ── */
   .month-nav {
     background: var(--surface2);
     padding: 10px 16px;
@@ -67,7 +65,6 @@
   }
   .month-btn:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
 
-  /* ── TABS ── */
   .tabs {
     display: flex; border-bottom: 1px solid var(--border);
     background: var(--surface);
@@ -82,11 +79,9 @@
   }
   .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
 
-  /* ── PAGES ── */
   .page { display: none; padding: 16px; }
   .page.active { display: block; }
 
-  /* ── RATING BOX ── */
   .rating-box {
     background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
     border: 1px solid var(--border);
@@ -99,12 +94,7 @@
     font-size: 0.8rem; color: var(--accent3);
     margin-bottom: 10px; letter-spacing: 0.05em;
   }
-  .rating-row {
-    display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
-  }
-  .rating-grade-btns {
-    display: flex; gap: 6px; flex-wrap: wrap;
-  }
+  .rating-grade-btns { display: flex; gap: 6px; flex-wrap: wrap; }
   .grade-btn {
     padding: 6px 14px; border-radius: 20px;
     border: 1px solid var(--border);
@@ -130,18 +120,10 @@
     font-weight: 700; transition: opacity .2s;
   }
   .rating-save-btn:hover { opacity: 0.85; }
-  .rating-display {
-    display: flex; align-items: center; gap: 10px; margin-top: 8px;
-  }
-  .rating-badge {
-    font-family: 'Space Mono', monospace;
-    font-size: 1.6rem; font-weight: 700; color: var(--accent3);
-  }
-  .rating-note-text {
-    font-size: 0.82rem; color: var(--muted); line-height: 1.5;
-  }
+  .rating-display { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+  .rating-badge { font-family: 'Space Mono', monospace; font-size: 1.6rem; font-weight: 700; color: var(--accent3); }
+  .rating-note-text { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
 
-  /* ── WEEK CARD ── */
   .week-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -154,13 +136,12 @@
     padding: 10px 14px;
     display: flex; align-items: center; gap: 8px;
     font-family: 'Space Mono', monospace; font-size: 0.75rem;
-    color: var(--muted); cursor: pointer;
+    color: var(--muted);
   }
   .week-header .week-label { flex: 1; }
   .week-header .week-stats { font-size: 0.7rem; color: var(--accent2); }
   .week-body { padding: 0; }
 
-  /* ── HABIT ROW ── */
   .habit-header-row {
     display: grid;
     padding: 8px 14px 6px;
@@ -182,9 +163,7 @@
     font-size: 0.82rem; font-weight: 600;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
-  .day-cell {
-    display: flex; align-items: center; justify-content: center;
-  }
+  .day-cell { display: flex; align-items: center; justify-content: center; }
   .check-box {
     width: 26px; height: 26px;
     border: 2px solid var(--border);
@@ -193,23 +172,15 @@
     transition: all .15s; font-size: 0.7rem;
     background: transparent;
   }
-  .check-box.checked {
-    background: var(--done);
-    border-color: var(--done);
-    color: #000; font-weight: 700;
-  }
+  .check-box.checked { background: var(--done); border-color: var(--done); color: #000; font-weight: 700; }
   .check-box:hover:not(.checked) { border-color: var(--done); }
 
-  /* ── SLEEP ROW ── */
   .sleep-row {
     background: var(--surface2);
     padding: 10px 14px;
     border-top: 1px solid var(--border);
   }
-  .sleep-row h4 {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.72rem; color: var(--accent2); margin-bottom: 8px;
-  }
+  .sleep-row h4 { font-family: 'Space Mono', monospace; font-size: 0.72rem; color: var(--accent2); margin-bottom: 8px; }
   .sleep-entries { display: flex; flex-direction: column; gap: 6px; }
   .sleep-entry {
     display: grid; grid-template-columns: 60px 1fr 1fr 60px;
@@ -224,13 +195,8 @@
     transition: border-color .2s;
   }
   .time-input:focus { outline: none; border-color: var(--accent2); }
-  .duration-badge {
-    text-align: right;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.7rem; color: var(--accent3);
-  }
+  .duration-badge { text-align: right; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--accent3); }
 
-  /* ── STREAK ── */
   .streak-box {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -239,57 +205,24 @@
     display: flex; align-items: center; gap: 14px;
   }
   .streak-fire { font-size: 2rem; }
-  .streak-info h3 {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem; color: var(--muted); margin-bottom: 2px;
-  }
-  .streak-count {
-    font-family: 'Space Mono', monospace;
-    font-size: 2rem; font-weight: 700; color: var(--accent);
-    line-height: 1;
-  }
+  .streak-info h3 { font-family: 'Space Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-bottom: 2px; }
+  .streak-count { font-family: 'Space Mono', monospace; font-size: 2rem; font-weight: 700; color: var(--accent); line-height: 1; }
   .streak-label { font-size: 0.75rem; color: var(--muted); }
 
-  /* ── SETTINGS PAGE ── */
-  .section-title {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem; color: var(--accent);
-    margin-bottom: 10px; letter-spacing: 0.08em;
-  }
-  .settings-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 14px;
-    margin-bottom: 14px;
-  }
-  .month-habits-info {
-    font-size: 0.8rem; color: var(--muted);
-    margin-bottom: 12px; line-height: 1.5;
-  }
-  .habit-list-item {
-    display: flex; align-items: center; gap: 8px;
-    padding: 8px 0; border-bottom: 1px solid var(--border);
-  }
+  .section-title { font-family: 'Space Mono', monospace; font-size: 0.75rem; color: var(--accent); margin-bottom: 10px; letter-spacing: 0.08em; }
+  .settings-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 14px; }
+  .month-habits-info { font-size: 0.8rem; color: var(--muted); margin-bottom: 12px; line-height: 1.5; }
+  .habit-list-item { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--border); }
   .habit-list-item:last-child { border-bottom: none; }
-  .habit-list-name {
-    flex: 1; font-size: 0.85rem;
-  }
-  .icon-btn {
-    background: transparent; border: none;
-    cursor: pointer; font-size: 1rem; padding: 4px;
-    border-radius: 6px; transition: background .2s;
-  }
+  .habit-list-name { flex: 1; font-size: 0.85rem; }
+  .icon-btn { background: transparent; border: none; cursor: pointer; font-size: 1rem; padding: 4px; border-radius: 6px; transition: background .2s; }
   .icon-btn:hover { background: var(--surface2); }
-  .add-habit-row {
-    display: flex; gap: 8px; margin-top: 10px;
-  }
+  .add-habit-row { display: flex; gap: 8px; margin-top: 10px; }
   .add-input {
     flex: 1; background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 8px; padding: 9px 12px;
-    color: var(--text); font-family: 'Sora', sans-serif;
-    font-size: 0.85rem;
+    color: var(--text); font-family: 'Sora', sans-serif; font-size: 0.85rem;
     transition: border-color .2s;
   }
   .add-input:focus { outline: none; border-color: var(--accent); }
@@ -301,8 +234,6 @@
     transition: opacity .2s;
   }
   .add-btn:hover { opacity: 0.85; }
-
-  /* copy habits from prev month */
   .copy-btn {
     background: var(--surface2); color: var(--accent2);
     border: 1px solid var(--accent2);
@@ -312,7 +243,6 @@
   }
   .copy-btn:hover { background: var(--accent2); color: #000; }
 
-  /* ── GRAPHS PAGE ── */
   .graph-habit-select {
     background: var(--bg); border: 1px solid var(--border);
     border-radius: 8px; padding: 8px 12px;
@@ -329,7 +259,6 @@
   }
   canvas { max-width: 100%; }
 
-  /* ── TOAST ── */
   .toast {
     position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
     background: var(--accent); color: #fff;
@@ -340,13 +269,8 @@
   }
   .toast.show { opacity: 1; }
 
-  /* ── SAVING indicator ── */
-  .save-indicator {
-    font-size: 0.7rem; color: var(--accent2);
-    font-family: 'Space Mono', monospace;
-  }
+  .save-indicator { font-size: 0.7rem; color: var(--accent2); font-family: 'Space Mono', monospace; }
 
-  /* loading */
   .loading-overlay {
     position: fixed; inset: 0; background: var(--bg);
     display: flex; align-items: center; justify-content: center;
@@ -369,10 +293,7 @@
     font-size: 0.85rem; width: 120px;
   }
 
-  /* ── no-fap streak for settings ── */
-  .streak-toggle-row {
-    display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
-  }
+  .streak-toggle-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
   .toggle {
     width: 40px; height: 22px; background: var(--border);
     border-radius: 11px; cursor: pointer; position: relative;
@@ -400,32 +321,24 @@
   <div style="font-family:'Space Mono',monospace;font-size:0.8rem;color:var(--muted)">Loading your data…</div>
 </div>
 
-<!-- HEADER -->
 <div class="header">
   <h1>habit<span>tracker</span></h1>
   <span class="save-indicator" id="saveInd"></span>
 </div>
 
-<!-- MONTH NAV -->
 <div class="month-nav" id="monthNav"></div>
 
-<!-- TABS -->
 <div class="tabs">
   <button class="tab-btn active" onclick="showTab('home')">🏠 Home</button>
   <button class="tab-btn" onclick="showTab('graphs')">📊 Graphs</button>
   <button class="tab-btn" onclick="showTab('settings')">⚙ Settings</button>
 </div>
 
-<!-- ════════════════════ HOME PAGE ════════════════════ -->
 <div class="page active" id="page-home">
-
-  <!-- Rating Box -->
   <div class="rating-box">
     <h3>📝 MONTH REVIEW</h3>
     <div id="ratingContent"></div>
   </div>
-
-  <!-- Streak -->
   <div class="streak-box" id="streakBox" style="display:none">
     <div class="streak-fire">🔥</div>
     <div class="streak-info">
@@ -434,12 +347,9 @@
       <div class="streak-label">days strong</div>
     </div>
   </div>
-
-  <!-- Habit Grid -->
   <div id="habitGrid"></div>
 </div>
 
-<!-- ════════════════════ GRAPHS PAGE ════════════════════ -->
 <div class="page" id="page-graphs">
   <select class="graph-habit-select" id="graphSelect" onchange="drawGraph()"></select>
   <div class="graph-canvas-wrap">
@@ -450,19 +360,14 @@
   </div>
 </div>
 
-<!-- ════════════════════ SETTINGS PAGE ════════════════════ -->
 <div class="page" id="page-settings">
-
   <div class="settings-card">
     <div class="section-title">MONTH HABITS</div>
     <div class="month-habits-info" id="settingsMonthInfo"></div>
-
     <button class="copy-btn" id="copyHabitsBtn" onclick="copyHabitsFromPrev()">
       📋 Copy habits from previous month
     </button>
-
     <div id="habitListUI"></div>
-
     <div class="add-habit-row">
       <input class="add-input" id="newHabitInput" placeholder="New habit name…" onkeydown="if(event.key==='Enter')addHabit()"/>
       <button class="add-btn" onclick="addHabit()">Add</button>
@@ -475,24 +380,21 @@
       <div class="toggle" id="streakToggle" onclick="toggleStreak()"></div>
       <span style="font-size:0.85rem">Show streak counter on home</span>
     </div>
-    <p style="font-size:0.8rem;color:var(--muted)">Streak counts from the last time you marked "Reset" on the home streak box. Or set a manual start date:</p>
+    <p style="font-size:0.8rem;color:var(--muted)">Set a manual start date for your streak:</p>
     <div style="margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
       <input type="date" id="streakStartDate" class="time-input" style="width:auto" onchange="saveStreakStart()"/>
       <span style="font-size:0.8rem;color:var(--muted)">= streak start date</span>
     </div>
   </div>
-
 </div>
 
 <div class="toast" id="toast"></div>
 
-<!-- ══════════════ FIREBASE + APP LOGIC ══════════════ -->
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getFirestore, doc, getDoc, setDoc, collection, getDocs }
   from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-// ── YOUR FIREBASE CONFIG ──────────────────────────────
 const firebaseConfig = {
   apiKey: "AIzaSyBb22IXOtFYkesV2QZ516TOSRc4Zk7h3Eg",
   authDomain: "tracker-b5c97.firebaseapp.com",
@@ -501,22 +403,22 @@ const firebaseConfig = {
   messagingSenderId: "64787012707",
   appId: "1:64787012707:web:6358098fa09543e05eac56"
 };
-// ─────────────────────────────────────────────────────
 
 const fbApp = initializeApp(firebaseConfig);
 const db    = getFirestore(fbApp);
 
-// ── STATE ─────────────────────────────────────────────
+// ── CHANGED: use "appconfig" instead of "__config__" ──
+const CONFIG_DOC_ID = 'appconfig';
+
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const DAYS   = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
 
-let currentYear, currentMonth; // 0-indexed month
-let monthData   = {};  // { habits:[], checks:{}, sleep:{}, rating:{grade,note}, review:{} }
-let globalCfg   = {};  // { streakStart, streakVisible }
-let allMonthKeys= [];  // ['2025-02', '2025-03', ...]
-let saveTimer   = null;
+let currentYear, currentMonth;
+let monthData    = {};
+let globalCfg    = {};
+let allMonthKeys = [];
+let saveTimer    = null;
 
-// ── HELPERS ───────────────────────────────────────────
 function monthKey(y, m) { return `${y}-${String(m+1).padStart(2,'0')}`; }
 function currentKey()    { return monthKey(currentYear, currentMonth); }
 function daysInMonth(y, m) { return new Date(y, m+1, 0).getDate(); }
@@ -526,7 +428,6 @@ function blankMonth(habits=[]) {
   return { habits: [...habits], checks: {}, sleep: {}, rating: { grade:'', note:'' } };
 }
 
-// ensure at least current + 11 prior months in nav
 function buildMonthList() {
   const t = today();
   const keys = new Set(allMonthKeys);
@@ -538,30 +439,25 @@ function buildMonthList() {
   allMonthKeys = Array.from(keys).sort();
 }
 
-// ── FIREBASE OPS ──────────────────────────────────────
 async function loadAll() {
-  // load global config
-  const cfgSnap = await getDoc(doc(db,'tracker','__config__'));
+  // use CONFIG_DOC_ID ("appconfig") — no leading underscores
+  const cfgSnap = await getDoc(doc(db, 'tracker', CONFIG_DOC_ID));
   globalCfg = cfgSnap.exists() ? cfgSnap.data() : { streakStart:'', streakVisible:false };
 
-  // load all month docs
   const colSnap = await getDocs(collection(db,'tracker'));
   colSnap.forEach(d => {
-    if (d.id === '__config__') return;
+    if (d.id === CONFIG_DOC_ID) return; // skip config doc
     monthData[d.id] = d.data();
     allMonthKeys.push(d.id);
   });
 
   buildMonthList();
 
-  // ensure current month key exists
   const t = today();
   currentYear  = t.y;
   currentMonth = t.m;
   if (!monthData[currentKey()]) {
-    // copy habits from most recent previous month
-    const prevHabits = getPrevMonthHabits();
-    monthData[currentKey()] = blankMonth(prevHabits);
+    monthData[currentKey()] = blankMonth(getPrevMonthHabits());
   }
 }
 
@@ -570,7 +466,7 @@ async function saveMonth(key) {
   await setDoc(doc(db,'tracker', key), monthData[key]);
 }
 async function saveConfig() {
-  await setDoc(doc(db,'tracker','__config__'), globalCfg);
+  await setDoc(doc(db,'tracker', CONFIG_DOC_ID), globalCfg);
 }
 
 function scheduleSave() {
@@ -588,19 +484,16 @@ function scheduleSave() {
   }, 800);
 }
 
-// ── DATA ACCESSORS ────────────────────────────────────
 function md() { return monthData[currentKey()]; }
 
 function getPrevMonthHabits() {
-  // find the most recent month before current that has habits
   for (let i = allMonthKeys.indexOf(currentKey())-1; i>=0; i--) {
     const d = monthData[allMonthKeys[i]];
     if (d && d.habits && d.habits.length) return d.habits;
   }
-  return ['W','S','Q','T','D','C','M'];
+  return ['Workout','Skipping','Quran','Trading','Drawing','Coding','No Fap'];
 }
 
-// ── UI: MONTH NAV ─────────────────────────────────────
 function renderMonthNav() {
   const nav = document.getElementById('monthNav');
   nav.innerHTML = '';
@@ -613,18 +506,15 @@ function renderMonthNav() {
     btn.onclick = () => switchMonth(y, m-1);
     nav.appendChild(btn);
   });
-  // scroll active into view
   const active = nav.querySelector('.active');
   if (active) active.scrollIntoView({inline:'center', behavior:'smooth'});
 }
 
-// ── SWITCH MONTH ──────────────────────────────────────
 async function switchMonth(y, m) {
   currentYear  = y;
   currentMonth = m;
   if (!monthData[currentKey()]) {
-    const prevHabits = getPrevMonthHabits();
-    monthData[currentKey()] = blankMonth(prevHabits);
+    monthData[currentKey()] = blankMonth(getPrevMonthHabits());
   }
   renderMonthNav();
   renderHome();
@@ -632,21 +522,18 @@ async function switchMonth(y, m) {
   drawGraph();
 }
 
-// ── HOME PAGE ─────────────────────────────────────────
 function renderHome() {
   renderRating();
   renderStreak();
   renderGrid();
 }
 
-// ── RATING ────────────────────────────────────────────
 function renderRating() {
   const r = md().rating || { grade:'', note:'' };
   const grades = ['A+','A','B+','B','C','D','F','10','9','8','7','6','5','4','3','2','1'];
   const box = document.getElementById('ratingContent');
 
   if (r.grade || r.note) {
-    // show saved rating + edit button
     box.innerHTML = `
       <div class="rating-display">
         <div class="rating-badge">${r.grade || '—'}</div>
@@ -656,7 +543,6 @@ function renderRating() {
     `;
     window.editRating = () => { md().rating = {grade:'',note:''}; renderRating(); };
   } else {
-    // show input form
     const gradeHtml = grades.map(g =>
       `<button class="grade-btn${r.grade===g?' selected':''}" onclick="selectGrade('${g}')">${g}</button>`
     ).join('');
@@ -676,16 +562,9 @@ function renderRating() {
       renderRating();
       showToast('Review saved! 📝');
     };
-    // restore grade selection
-    if (r.grade) {
-      document.querySelectorAll('.grade-btn').forEach(b => {
-        if (b.textContent===r.grade) b.classList.add('selected');
-      });
-    }
   }
 }
 
-// ── STREAK ────────────────────────────────────────────
 function renderStreak() {
   const box = document.getElementById('streakBox');
   if (!globalCfg.streakVisible) { box.style.display='none'; return; }
@@ -696,25 +575,21 @@ function renderStreak() {
   document.getElementById('streakCount').textContent = Math.max(0,diff);
 }
 
-// ── GRID ──────────────────────────────────────────────
 function renderGrid() {
   const grid = document.getElementById('habitGrid');
   grid.innerHTML = '';
-  const data  = md();
+  const data   = md();
   const habits = data.habits || [];
   const total  = daysInMonth(currentYear, currentMonth);
   const t      = today();
   const isCurrent = (t.y===currentYear && t.m===currentMonth);
 
-  // Group days into weeks
-  const firstDay = new Date(currentYear, currentMonth, 1).getDay(); // 0=Sun
-  // adjust to Mon start: Mon=0 … Sun=6
+  const firstDay   = new Date(currentYear, currentMonth, 1).getDay();
   const startOffset = (firstDay + 6) % 7;
-  const totalCells  = startOffset + total;
-  const numWeeks    = Math.ceil(totalCells / 7);
+  const numWeeks    = Math.ceil((startOffset + total) / 7);
 
   for (let w=0; w<numWeeks; w++) {
-    const weekStart = w*7 - startOffset + 1; // day of month for Mon of this week
+    const weekStart = w*7 - startOffset + 1;
     const weekDays  = [];
     for (let d=0; d<7; d++) {
       const day = weekStart + d;
@@ -725,12 +600,10 @@ function renderGrid() {
     const card = document.createElement('div');
     card.className = 'week-card';
 
-    // header
     const d1 = weekDays[0], dN = weekDays[weekDays.length-1];
     const hdr = document.createElement('div');
     hdr.className = 'week-header';
 
-    // count how many habit-day combos done this week
     let done=0, possible=0;
     weekDays.forEach(day => habits.forEach(h => {
       if (isCurrent && day > t.d) return;
@@ -746,8 +619,6 @@ function renderGrid() {
     body.className = 'week-body';
 
     if (habits.length) {
-      // column header
-      const colCount = 1 + weekDays.length;
       const colTemplate = `140px repeat(${weekDays.length}, 1fr)`;
 
       const hrow = document.createElement('div');
@@ -774,7 +645,7 @@ function renderGrid() {
           const isDone = (data.checks[h]||{})[day];
           const isFuture = isCurrent && day > t.d;
           const box = document.createElement('div');
-          box.className = 'check-box' + (isDone?' checked':'') + (isFuture?' disabled':'');
+          box.className = 'check-box' + (isDone?' checked':'');
           box.textContent = isDone ? '✓' : '';
           if (!isFuture) {
             box.onclick = () => {
@@ -783,15 +654,12 @@ function renderGrid() {
               box.classList.toggle('checked', data.checks[h][day]);
               box.textContent = data.checks[h][day] ? '✓' : '';
               scheduleSave();
-              // update week stats
-              hdr.querySelector('.week-stats').textContent = (() => {
-                let d2=0,p2=0;
-                weekDays.forEach(day2 => habits.forEach(h2 => {
-                  if(isCurrent&&day2>t.d)return; p2++;
-                  if((data.checks[h2]||{})[day2]) d2++;
-                }));
-                return `${d2}/${p2} done`;
-              })();
+              let d2=0,p2=0;
+              weekDays.forEach(day2 => habits.forEach(h2 => {
+                if(isCurrent&&day2>t.d)return; p2++;
+                if((data.checks[h2]||{})[day2]) d2++;
+              }));
+              hdr.querySelector('.week-stats').textContent = `${d2}/${p2} done`;
             };
           }
           cell.appendChild(box);
@@ -801,7 +669,6 @@ function renderGrid() {
       });
     }
 
-    // Sleep section for this week
     const sleepRow = document.createElement('div');
     sleepRow.className = 'sleep-row';
     sleepRow.innerHTML = `<h4>😴 SLEEP</h4>`;
@@ -817,12 +684,12 @@ function renderGrid() {
       label.className = 'sleep-label';
       label.textContent = `${day} ${MONTHS[currentMonth]}`;
 
-      const bedInput  = makeTimeInput(sl.bedtime,  v => { ensureSleepDay(day); data.sleep[day].bedtime=v;  updateDuration(durBadge,data.sleep[day]); scheduleSave(); });
-      const wakeInput = makeTimeInput(sl.waketime, v => { ensureSleepDay(day); data.sleep[day].waketime=v; updateDuration(durBadge,data.sleep[day]); scheduleSave(); });
-
       const durBadge = document.createElement('div');
       durBadge.className = 'duration-badge';
       updateDuration(durBadge, sl);
+
+      const bedInput  = makeTimeInput(sl.bedtime,  v => { ensureSleepDay(day); data.sleep[day].bedtime=v;  updateDuration(durBadge,data.sleep[day]); scheduleSave(); });
+      const wakeInput = makeTimeInput(sl.waketime, v => { ensureSleepDay(day); data.sleep[day].waketime=v; updateDuration(durBadge,data.sleep[day]); scheduleSave(); });
 
       entry.appendChild(label);
       entry.appendChild(bedInput);
@@ -859,7 +726,6 @@ function updateDuration(badge, sl) {
   badge.textContent = `${Math.floor(mins/60)}h${mins%60?mins%60+'m':''}`;
 }
 
-// ── SETTINGS ─────────────────────────────────────────
 function renderSettings() {
   const ck = currentKey();
   const [y,m] = ck.split('-').map(Number);
@@ -886,7 +752,6 @@ function renderSettings() {
       inp.onblur = () => {
         const v = inp.value.trim();
         if (v && v!==h) {
-          // rename habit everywhere in this month
           md().habits[i] = v;
           if (md().checks[h]) { md().checks[v]=md().checks[h]; delete md().checks[h]; }
           scheduleSave();
@@ -899,7 +764,7 @@ function renderSettings() {
     const delBtn = document.createElement('button');
     delBtn.className = 'icon-btn'; delBtn.title='Delete'; delBtn.textContent='🗑️';
     delBtn.onclick = () => {
-      if (!confirm(`Delete "${h}" from ${MONTHS[m-1]} ${y}? (Data for other months is not affected)`)) return;
+      if (!confirm(`Delete "${h}" from ${MONTHS[m-1]} ${y}?`)) return;
       md().habits.splice(i,1);
       delete md().checks[h];
       scheduleSave();
@@ -912,13 +777,11 @@ function renderSettings() {
     ul.appendChild(li);
   });
 
-  // streak
   const tog = document.getElementById('streakToggle');
   tog.classList.toggle('on', !!globalCfg.streakVisible);
   if (globalCfg.streakStart)
     document.getElementById('streakStartDate').value = globalCfg.streakStart;
 
-  // copy btn
   const prevKey = allMonthKeys[allMonthKeys.indexOf(currentKey())-1];
   document.getElementById('copyHabitsBtn').style.display = prevKey ? '' : 'none';
 }
@@ -957,7 +820,6 @@ window.saveStreakStart = async function() {
   renderStreak();
 };
 
-// ── GRAPHS ────────────────────────────────────────────
 function populateGraphSelect() {
   const sel = document.getElementById('graphSelect');
   const habits = md().habits || [];
@@ -982,7 +844,6 @@ function drawHabitGraph(habit) {
 
   const checks = md().checks[habit] || {};
   const labels = [], values = [];
-  // rolling 7-day average
   for (let d=1; d<=maxDay; d++) {
     labels.push(d);
     values.push(checks[d] ? 1 : 0);
@@ -991,11 +852,8 @@ function drawHabitGraph(habit) {
   canvas.width = Math.max(300, labels.length*28);
   const W=canvas.width, H=200;
   ctx.clearRect(0,0,W,H);
-
-  // bg
   ctx.fillStyle='#1a1a24'; ctx.fillRect(0,0,W,H);
 
-  // bars
   const barW = Math.max(4, W/labels.length - 4);
   labels.forEach((d,i) => {
     const x = (i/(labels.length)) * W + barW/2;
@@ -1004,12 +862,10 @@ function drawHabitGraph(habit) {
     ctx.beginPath();
     ctx.roundRect(x, H-40-done*100, barW, done?100:6, 4);
     ctx.fill();
-
     ctx.fillStyle='#7a7a9a'; ctx.font='10px Space Mono,monospace';
     ctx.textAlign='center'; ctx.fillText(d, x+barW/2, H-10);
   });
 
-  // connect line through done days
   ctx.beginPath(); ctx.strokeStyle='#7c6af7'; ctx.lineWidth=2;
   let started=false;
   labels.forEach((d,i) => {
@@ -1033,8 +889,7 @@ function drawSleepGraph() {
   const maxDay = isCurrent ? t.d : total;
 
   const sleep = md().sleep || {};
-  const durations = [];
-  const labels    = [];
+  const durations = [], labels = [];
   for (let d=1; d<=maxDay; d++) {
     const sl = sleep[d] || {};
     labels.push(d);
@@ -1056,14 +911,12 @@ function drawSleepGraph() {
   const maxH = Math.max(10, ...durations.filter(v=>v!==null));
   const barW  = Math.max(4, W/labels.length - 4);
 
-  // 8h reference line
   ctx.strokeStyle='#2e2e3f'; ctx.lineWidth=1; ctx.setLineDash([4,4]);
   const refY = H-40 - (8/maxH)*(H-60);
   ctx.beginPath(); ctx.moveTo(0,refY); ctx.lineTo(W,refY); ctx.stroke();
   ctx.setLineDash([]);
   ctx.fillStyle='#7a7a9a'; ctx.font='9px Space Mono'; ctx.fillText('8h',2,refY-2);
 
-  // bars + connected line (skip nulls)
   const points = [];
   labels.forEach((d,i) => {
     const x   = (i/labels.length)*W + barW/2;
@@ -1081,7 +934,6 @@ function drawSleepGraph() {
     }
   });
 
-  // connect line (only existing data points — skips missing days)
   if (points.length>1) {
     ctx.beginPath(); ctx.strokeStyle='#7c6af7'; ctx.lineWidth=2;
     points.forEach((p,i) => i===0?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y));
@@ -1092,7 +944,6 @@ function drawSleepGraph() {
   ctx.textAlign='left'; ctx.fillText(`Sleep — ${MONTHS[currentMonth]} ${currentYear}`, 10, 20);
 }
 
-// ── TAB SWITCH ────────────────────────────────────────
 window.showTab = function(tab) {
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
@@ -1104,14 +955,12 @@ window.showTab = function(tab) {
   if (tab==='settings') renderSettings();
 };
 
-// ── TOAST ─────────────────────────────────────────────
 window.showToast = function(msg) {
   const t=document.getElementById('toast');
   t.textContent=msg; t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),2200);
 };
 
-// ── BOOT ──────────────────────────────────────────────
 (async () => {
   try {
     await loadAll();
@@ -1128,6 +977,3 @@ window.showToast = function(msg) {
 </script>
 </body>
 </html>
-
-
-
